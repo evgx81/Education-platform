@@ -3,15 +3,18 @@ from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
 
 class MLSUserCreationForm(UserCreationForm):
-    
     class Meta:
         model = get_user_model()
-        fields = ("email", "username",)
+        fields = (
+            "email",
+            "username",
+        )
 
-    
+
 class MLSUserChangeForm(UserChangeForm):
-
     class Meta:
         model = get_user_model()
-        fields = ("email", 'username')
-
+        fields = (
+            "email",
+            "username",
+        )
